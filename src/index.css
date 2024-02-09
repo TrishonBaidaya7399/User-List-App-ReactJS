@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.gradient-text {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #03045e, #023e8a, #0077b6, #0096c7);
+    display: inline-block;
+  }
