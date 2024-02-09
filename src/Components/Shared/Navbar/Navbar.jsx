@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types';
-
+import { MdMenu } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -31,9 +31,9 @@ const Navbar = () => {
             ? "text-blue-600 font-bold border-b-[3px] border-blue-600 pb-1 border-[transparent] "
             : "text-blue-400 border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-blue-400 duration-300 hover:text-blue-600"
         }
-        to="/contact"
+        to="/addUser"
       >
-        <li>Contact</li>
+        <li>Add User</li>
       </NavLink>
     </div>
   );
@@ -56,23 +56,10 @@ const Navbar = () => {
         
         </div>
         <div className="navbar-end">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu menu-horizontal px-1 hidden lg:block">{navLinks}</ul>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+             <MdMenu className="text-3xl text-blue-500"/> 
             </div>
             <ul
               tabIndex={0}

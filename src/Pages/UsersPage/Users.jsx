@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import UserCard from '../../Components/Shared/Navbar/UserCard';
 import { fetchUsersAsync } from '../../Features/Users/UsersSlice';
+import { RiUserAddFill } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -16,9 +18,9 @@ const Home = () => {
     dispatch(fetchUsersAsync());
   }, [dispatch]);
 
-  const sortedUsers = [...users]; // Create a copy of the users array for sorting
+  const sortedUsers = [...users]; 
 
-  // Sort users based on the selected option
+
   sortedUsers.sort((a, b) => {
     switch (sortOption) {
       case 'name':
@@ -40,23 +42,24 @@ const Home = () => {
   return (
     <div className="mx-h-[100vh]">
       <div className="mb-4 flex justify-between items-center my-6">
-        <div>
-          <label htmlFor="sortOption" className="mr-2">
+        <div className='flex justify-center items-center'>
+          <label htmlFor="sortOption " className="mr-2 hidden md:block">
             Sort by:
           </label>
           <select
             id="sortOption"
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
-            className="select select-bordered w-24 h-7 m-0 md:h-10 md:w-auto border-blue-400 text-blue-600"
+            className="input input-bordered w-24 h-7 m-0 md:h-10 md:w-auto border-blue-400 text-blue-600"
           >
             <option value="name">Name</option>
             <option value="email">Email</option>
             <option value="company">Company</option>
           </select>
         </div>
-        <div>
-          <label htmlFor="searchQuery" className="mr-2">
+        <div className='flex justify-center items-center gap-2'>
+       
+          <label htmlFor="searchQuery" className="mr-2 hidden md:block">
             Search:
           </label>
           <input
@@ -67,6 +70,11 @@ const Home = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="input input-bordered w-24 h-7 m-0 md:h-10 md:w-auto border-blue-400 text-blue-600"
           />
+        </div>
+           <div>
+            <Link to="/addUser">
+          <button className='text-2xl md:text-3xl text-blue-500 rounded-full border-2 border-blue-600 p-1 text-center font-semibold'><RiUserAddFill /></button>
+            </Link>
         </div>
       </div>
 

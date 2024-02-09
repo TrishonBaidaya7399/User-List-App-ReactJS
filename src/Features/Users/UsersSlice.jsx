@@ -2,13 +2,24 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+// Fetch users async thunk
 export const fetchUsersAsync = createAsyncThunk('users/fetchUsers', async () => {
   try {
-    const response = await axios.get('https://dummyjson.com/users');
-    console.log(response);
-    return response.data.users;
+    const response = await axios.get('http://localhost:5000/users');
+    return response.data;
   } catch (error) {
     console.error('Error fetching data:', error);
+    throw error;
+  }
+});
+
+// Add user async thunk
+export const addUserAsync = createAsyncThunk('users/addUser', async (newUser) => {
+  try {
+    const response = await axios.post('http://localhost:5000/users', newUser);
+    return response.data;
+  } catch (error) {
+    console.error('Error adding user:', error);
     throw error;
   }
 });
@@ -26,6 +37,7 @@ export const usersSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      // Fetch users reducer cases
       .addCase(fetchUsersAsync.pending, (state) => {
         state.isLoading = true;
         state.status = 'loading';
@@ -39,9 +51,24 @@ export const usersSlice = createSlice({
         state.isLoading = false;
         state.status = 'failed';
         state.error = action.error.message;
+      })
+      // Add user reducer cases
+      .addCase(addUserAsync.pending, (state) => {
+        state.isLoading = true;
+        state.status = 'loading';
+      })
+      .addCase(addUserAsync.fulfilled, (state) => {
+        state.isLoading = false;
+        state.status = 'succeeded';
+      })
+      .addCase(addUserAsync.rejected, (state, action) => {
+        state.isLoading = false;
+        state.status = 'failed';
+        state.error = action.error.message;
       });
   },
 });
+
 const usersReducer = usersSlice.reducer;
 
 export default usersReducer;
