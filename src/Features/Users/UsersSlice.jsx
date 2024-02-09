@@ -5,7 +5,7 @@ import axios from "axios";
 // Fetch users async thunk
 export const fetchUsersAsync = createAsyncThunk('users/fetchUsers', async () => {
   try {
-    const response = await axios.get('http://localhost:5000/users');
+    const response = await axios.get('https://user-list-app-react-js-server.vercel.app/users');
     return response.data;
   } catch (error) {
     console.error('Error fetching data:', error);
@@ -16,7 +16,7 @@ export const fetchUsersAsync = createAsyncThunk('users/fetchUsers', async () => 
 // Add user async thunk
 export const addUserAsync = createAsyncThunk('users/addUser', async (newUser) => {
   try {
-    const response = await axios.post('http://localhost:5000/users', newUser);
+    const response = await axios.post('https://user-list-app-react-js-server.vercel.app/users', newUser);
     return response.data;
   } catch (error) {
     console.error('Error adding user:', error);
