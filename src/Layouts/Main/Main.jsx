@@ -11,7 +11,7 @@ const Main = () => {
         backgroundPosition: 'center',
     };
     return (
-        <div style={divStyle}>
+        <div style={divStyle} className="min-h-[100vh] overflow-hidden ">
             <Navbar/>
             <div className="px-2 md:px-12 lg:px-[200px]">
             <Outlet></Outlet>
