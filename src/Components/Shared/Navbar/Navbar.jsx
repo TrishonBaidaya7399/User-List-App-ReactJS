@@ -1,8 +1,10 @@
 // import PropTypes from 'prop-types';
-import { MdMenu } from "react-icons/md";
+import { useState } from "react";
+import { MdClose, MdMenu } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
   const navLinks = (
     <div className="lg:flex gap-6 font-semibold text-white">
       <NavLink
@@ -58,17 +60,27 @@ const Navbar = () => {
         <div className="navbar-end">
         <ul className="menu menu-horizontal px-1 hidden lg:block">{navLinks}</ul>
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-             <MdMenu className="text-3xl text-blue-500"/> 
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden" onClick={()=> setOpen(!open)}>
+              {
+                open 
+                ?
+                <MdClose className="text-3xl text-blue-500"/>
+                :
+                <MdMenu className="text-3xl text-blue-500"/> 
+              }
             </div>
-            <ul
+            {
+              open &&
+              <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] py-2 shadow bg-base-100 rounded-sm w-[100px] px-4 -ml-10"
             >
               {navLinks}
             </ul>
+            }
           </div>
         </div>
+        
       </div>
     </div>
   );

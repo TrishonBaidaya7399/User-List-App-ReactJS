@@ -149,6 +149,7 @@ const AddUser = () => {
                   First Name:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="firstName"
@@ -160,6 +161,7 @@ const AddUser = () => {
                 Last Name:
                 </label>
                 <input
+                required
                   className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                   type="text"
                   name="lastName"
@@ -173,6 +175,7 @@ const AddUser = () => {
                   Email:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="email"
@@ -185,6 +188,7 @@ const AddUser = () => {
                   Avatar URL:
                 </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="image"
@@ -197,6 +201,7 @@ const AddUser = () => {
                   Age:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="number"
                     name="age"
@@ -210,6 +215,7 @@ const AddUser = () => {
                   Gender:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="gender"
@@ -223,6 +229,7 @@ const AddUser = () => {
                   Phone:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="phone"
@@ -236,6 +243,7 @@ const AddUser = () => {
                   Domain:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="domain"
@@ -249,6 +257,7 @@ const AddUser = () => {
                   Blood Group:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="bloodGroup"
@@ -262,6 +271,7 @@ const AddUser = () => {
                   Birth Date:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="date"
                     name="birthDate"
@@ -275,6 +285,7 @@ const AddUser = () => {
                   Address:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="address"
@@ -289,6 +300,7 @@ const AddUser = () => {
                   City:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="city"
@@ -322,6 +334,7 @@ const AddUser = () => {
                   Company Name:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="name"
@@ -335,6 +348,7 @@ const AddUser = () => {
                   Title:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="title"
@@ -348,6 +362,7 @@ const AddUser = () => {
                   Department:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="department"
@@ -361,6 +376,7 @@ const AddUser = () => {
                   Address:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="companyAddress"
@@ -374,6 +390,7 @@ const AddUser = () => {
                   City:
                   </label>
                   <input
+                  required
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
                     type="text"
                     name="companyCity"

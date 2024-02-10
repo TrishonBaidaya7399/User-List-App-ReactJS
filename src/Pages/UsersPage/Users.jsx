@@ -1,12 +1,15 @@
-// Home.jsx
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import UserCard from '../../Components/Shared/Navbar/UserCard';
 import { fetchUsersAsync } from '../../Features/Users/UsersSlice';
 import { RiUserAddFill } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import { MdOutlineSort } from "react-icons/md";
+import { IoSearchCircleOutline } from "react-icons/io5";
+
 
 const Home = () => {
+  const [open, setOpen] = useState(false)
   const dispatch = useDispatch();
   const users = useSelector((state) => state.usersReducer.users);
   const isLoading = useSelector((state) => state.usersReducer.isLoading);
@@ -41,41 +44,93 @@ const Home = () => {
 
   return (
     <div className="mx-h-[100vh]">
+      <div className="md:hidden">
       <div className="mb-4 flex justify-between items-center my-6">
         <div className='flex justify-center items-center'>
-          <label htmlFor="sortOption " className="mr-2 hidden md:block">
-            Sort by:
+          <label htmlFor="sortOption " className="mr-2">
+          <MdOutlineSort className='text-3xl text-blue-600' onClick={()=>setOpen(!open)}/>
           </label>
-          <select
+          {
+            open &&
+            <>
+            <select
             id="sortOption"
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
-            className="input input-bordered w-24 h-7 m-0 md:h-10 md:w-auto border-blue-400 text-blue-600"
-          >
-            <option value="name">Name</option>
-            <option value="email">Email</option>
-            <option value="company">Company</option>
+            className="select select-bordered w-fit h-7 m-0 md:w-auto border-blue-400 text-blue-600"
+            >
+            <option value="name">Filter by Name</option>
+            <option value="email">Filter by Email</option>
+            <option value="company">Filter by Company</option>
           </select>
+            </>
+          }
+          {/* <FaSortDown className='text-blue-600 -ml-10'/> */}
         </div>
+        {!open &&
         <div className='flex justify-center items-center gap-2'>
        
-          <label htmlFor="searchQuery" className="mr-2 hidden md:block">
-            Search:
-          </label>
           <input
             type="text"
             id="searchQuery"
             value={searchQuery}
             placeholder='Search by Name'
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="input input-bordered w-24 h-7 m-0 md:h-10 md:w-auto border-blue-400 text-blue-600"
-          />
+            className="input input-bordered w-full h-7 m-0 md:w-auto border-blue-400 text-blue-600"
+            />
+          <label htmlFor="searchQuery" className="">
+          <IoSearchCircleOutline className="text-2xl text-blue-600 -ml-10"/>
+          </label>
         </div>
+          }
            <div>
             <Link to="/addUser">
           <button className='text-2xl md:text-3xl text-blue-500 rounded-full border-2 border-blue-600 p-1 text-center font-semibold'><RiUserAddFill /></button>
             </Link>
         </div>
+      </div>
+      </div>
+      <div className="hidden md:block">
+      <div className="mb-4 flex justify-between items-center my-6">
+        <div className='flex justify-center items-center'>
+          <label htmlFor="sortOption " className="mr-2">
+          <MdOutlineSort className='text-3xl text-blue-600'/>
+          </label>
+         
+            <select
+            id="sortOption"
+            value={sortOption}
+            onChange={(e) => setSortOption(e.target.value)}
+            className="select select-bordered w-fit h-7 m-0 md:w-auto border-blue-400 text-blue-600"
+            >
+            <option value="name">Filter by Name</option>
+            <option value="email">Filter by Email</option>
+            <option value="company">Filter by Company</option>
+          </select>
+
+        </div>
+        
+        <div className='flex justify-center items-center gap-2'>
+       
+          <input
+            type="text"
+            id="searchQuery"
+            value={searchQuery}
+            placeholder='Search by Name'
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="input input-bordered w-full h-7 m-0 md:w-auto border-blue-400 text-blue-600"
+            />
+          <label htmlFor="searchQuery" className="">
+          <IoSearchCircleOutline className="text-2xl text-blue-600 -ml-10"/>
+          </label>
+        </div>
+          
+           <div>
+            <Link to="/addUser">
+          <button className='text-2xl text-blue-500 rounded-full border-2 border-blue-600 p-1 text-center font-semibold'><RiUserAddFill /></button>
+            </Link>
+        </div>
+      </div>
       </div>
 
       {isLoading ? (
