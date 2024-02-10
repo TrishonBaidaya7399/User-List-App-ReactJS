@@ -12,6 +12,7 @@
 .gradient-text {
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #03045e, #023e8a, #0077b6, #0096c7);
+    background-image: linear-gradient(to right, #03045e, #0077b6, #0096c7);
     display: inline-block;
+    
   }
