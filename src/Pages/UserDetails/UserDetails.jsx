@@ -66,7 +66,9 @@ const UserDetails = () => {
           </div>
         </div>
       ) : (
-        <p>Loading user details...</p>
+        <div className="flex justify-center items-center py-[20%]">
+        <span className="loading loading-spinner text-accent w-12 h-12"></span>
+      </div>
       )}
     </div>
   );
