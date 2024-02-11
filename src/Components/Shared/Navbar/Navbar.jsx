@@ -7,7 +7,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
   const navLinks = (
     <div className="lg:flex gap-6 font-semibold text-white">
-      <NavLink
+      {/* <NavLink
         className={({ isActive }) =>
           isActive
             ? "text-blue-600 font-bold border-b-[3px] border-blue-600 pb-1 border-[transparent] "
@@ -16,14 +16,14 @@ const Navbar = () => {
         to="/"
       >
         <li>Home</li>
-      </NavLink>
+      </NavLink> */}
       <NavLink
         className={({ isActive }) =>
           isActive
             ? "text-blue-600 font-bold border-b-[3px] border-blue-600 pb-1 border-[transparent] "
             : "text-blue-400 border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-blue-400 duration-300 hover:text-blue-600"
         }
-        to="/users"
+        to="/"
       >
         <li>Users</li>
       </NavLink>

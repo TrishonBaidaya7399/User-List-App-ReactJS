@@ -7,15 +7,13 @@ import { FaEarthAsia } from "react-icons/fa6";
 
 
 const UserDetails = () => {
-  const { userId } = useParams(); // Access the userId parameter from the route
+  const { userId } = useParams(); 
   const [userDetails, setUserDetails] = useState(null);
 
   useEffect(() => {
-    // Fetch user details using the userId
-    // Replace the following with your actual fetch logic
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch(`https://user-list-app-react-js-server.vercel.app/users/${userId}`);
+        const response = await fetch(`https://dummyjson.com/users/${userId}`);
         const data = await response.json();
         console.log(data);
         setUserDetails(data);
