@@ -1,4 +1,3 @@
-// UserSlice.jsx
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 // Fetch users async thunk
@@ -6,8 +5,6 @@ export const fetchUsersAsync = createAsyncThunk('users/fetchUsers', async () => 
   try {
     const response = await fetch('https://dummyjson.com/users');
     const data = await response.json();
-
-    // Assuming the structure of the response is { users: [] }
     return data.users;
   } catch (error) {
     console.error('Error fetching data:', error);
@@ -27,7 +24,8 @@ export const addUserAsync = createAsyncThunk('users/addUser', async (newUser) =>
     });
 
     const createdUser = await response.json();
-console.log(createdUser);
+    console.log(createdUser);
+
     return createdUser;
   } catch (error) {
     console.error('Error adding user:', error);
@@ -69,6 +67,8 @@ export const usersSlice = createSlice({
       .addCase(addUserAsync.fulfilled, (state, action) => {
         state.isLoading = false;
         state.status = 'succeeded';
+
+        // Add the newly created user to the users array
         state.users.push(action.payload);
       })
       .addCase(addUserAsync.rejected, (state, action) => {

@@ -68,6 +68,7 @@ const AddUser = () => {
     try {
       console.log(newUser);
       dispatch(addUserAsync(newUser));
+      
       setNewUser({
         firstName: "",
         lastName: "",
@@ -387,7 +388,7 @@ const AddUser = () => {
                   type="text"
                   name="companyCity"
                   placeholder="City"
-                  value={newUser.company.address.city}
+                  value={newUser.company.address.companyCity}
                   onChange={handleInputChange}
                 />
               </div>
