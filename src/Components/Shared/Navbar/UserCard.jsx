@@ -12,7 +12,7 @@ const UserCard = ({ user }) => {
         navigate(`/userDetails/${userId}`, {replace: true})
     }
     return (
-        <div className="bg-white p-2 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+        <div className="bg-white p-2 rounded-lg shadow-md " data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
       <img src={user.image} alt={user.firstName} className="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-blue-500 p-1" />
       <button onClick={()=>handleClick(user?.id)} >
       <h2 className="text-xl font-semibold">{`${user.firstName} ${user.lastName}`}</h2>

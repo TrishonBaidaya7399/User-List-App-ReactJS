@@ -144,7 +144,7 @@ const AddUser = () => {
   };
 
   return (
-    <div>
+    <div className="px-2 md:px-12 lg:px-[200px]">
       <div className="title text-center my-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold gradient-text">
           Add User

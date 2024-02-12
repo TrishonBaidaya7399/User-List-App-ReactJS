@@ -14,7 +14,7 @@ const Main = () => {
     return (
         <div style={divStyle} className="min-h-[100vh] overflow-hidden ">
             <Navbar/>
-            <div className="px-2 md:px-12 lg:px-[200px]">
+            <div className="">
             <Outlet></Outlet>
             </div>
             <Footer/>
