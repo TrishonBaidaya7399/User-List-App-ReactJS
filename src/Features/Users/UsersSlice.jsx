@@ -1,4 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { produce } from "immer";
+
 
 // Fetch users async thunk
 export const fetchUsersAsync = createAsyncThunk('users/fetchUsers', async () => {
@@ -23,6 +25,11 @@ export const addUserAsync = createAsyncThunk('users/addUser', async (newUser) =>
       body: JSON.stringify(newUser),
     });
 
+    if (!response.ok) {
+      console.error('Error in network request:', response.status, response.statusText);
+      throw new Error('Network request failed');
+    }
+
     const createdUser = await response.json();
     console.log(createdUser);
 
@@ -39,7 +46,7 @@ const initialState = {
   status: null,
   error: null,
 };
-
+console.log(initialState);
 export const usersSlice = createSlice({
   name: "users",
   initialState,
@@ -67,9 +74,13 @@ export const usersSlice = createSlice({
       .addCase(addUserAsync.fulfilled, (state, action) => {
         state.isLoading = false;
         state.status = 'succeeded';
-
-        // Add the newly created user to the users array
-        state.users.push(action.payload);
+        console.log('State before adding new user:', state.users);
+        // state.users = [...state.users, action.payload];
+        // state.users.push(action.payload);
+        state.users = produce(state.users, (draft) => {
+          draft.push(action.payload);
+        });
+        console.log('State after adding new user:', state.users);
       })
       .addCase(addUserAsync.rejected, (state, action) => {
         state.isLoading = false;

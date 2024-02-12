@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const UserCard = ({ user }) => {
-  console.log(user);
+  // console.log(user);
     const navigate = useNavigate();
 
     const handleClick = (userId)=>{
@@ -17,9 +17,9 @@ const UserCard = ({ user }) => {
       <button onClick={()=>handleClick(user?.id)} >
       <h2 className="text-xl font-semibold">{`${user.firstName} ${user.lastName}`}</h2>
       </button>
-      <p className="text-gray-600 text-sm">Email: {user.email}</p>
-      <p className="text-gray-600 text-sm">Address: {`${user?.address?.address ? user?.address?.address : user?.address?.companyAddress}, ${user?.address?.city ? user?.address?.city : user?.address?.companyCity}`}</p>
-      <p className="text-gray-600 text-sm">Company: {user?.company?.name}</p>
+      <p className="text-gray-600 text-sm"> {user.email}</p>
+      <p className="text-gray-600 text-sm"><span className='text-blue-500 font-semibold'>Company:</span> {user?.company?.name}</p>
+      <p className="text-gray-600 text-sm"><span className='text-blue-500 font-semibold'>Address:</span> {`${user?.address?.address ? user?.address?.address : user?.address?.companyAddress}, ${user?.address?.city ? user?.address?.city : user?.address?.companyCity}`}</p>
     </div>
   );
 };
