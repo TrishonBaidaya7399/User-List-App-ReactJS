@@ -24,7 +24,7 @@ const UserDetails = () => {
 
     fetchUserDetails();
   }, [userId]);
-
+console.log("Selected User: "+userDetails);
   return (
     <div className="my-6 md:my-12 px-2 md:px-12 lg:px-[100px]">
       {userDetails ? (
