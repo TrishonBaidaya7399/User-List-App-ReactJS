@@ -2,6 +2,7 @@
 
 import { Outlet } from "react-router-dom";
 import Navbar from "../../Components/Shared/Navbar/Navbar";
+import Footer from "../../Components/Shared/Footer/Footer";
 
 const Main = () => {
     const divStyle = {
@@ -16,6 +17,7 @@ const Main = () => {
             <div className="px-2 md:px-12 lg:px-[200px]">
             <Outlet></Outlet>
             </div>
+            <Footer/>
         </div>
     );
 };
