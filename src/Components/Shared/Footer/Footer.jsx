@@ -5,7 +5,7 @@ import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 const Footer = () => {
     return (
         <div>
-<footer className="footer items-center p-4 bg-base-100 bg-opacity-60 text-neutral-content px-4 md:px-12 lg:px-[200px]">
+<footer className="footer items-center p-4 bg-base-100 bg-opacity-60 text-neutral-content px-4 md:px-12 lg:px-[100px]">
   <aside className="items-center flex text-sm text-blue-500">
   <img src="https://i.ibb.co/Z2Y6FxM/830a8274e9d37f5530538d9357ebf3d8-removebg-preview.png" alt="usersInfo" className="w-8 h-8" />
     <p>Copyright © 2024 - All right reserved by UsersInfo</p>

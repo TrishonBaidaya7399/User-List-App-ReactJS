@@ -41,7 +41,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100 bg-opacity-70 px-2 md:px-12 lg:px-[200px]">
+      <div className="navbar bg-base-100 bg-opacity-70 px-2 md:px-12 lg:px-[100px]">
         <div className="navbar-start">
           <div className="flex justify-center items-center gap-4">
             <img

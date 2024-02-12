@@ -7,13 +7,13 @@ const Banner = ({users}) => {
     console.log(users);
   return (
     <div className=" ">
-      <div className=" py-12 md:py-[80px]">
+      <div className=" py-12 md:py-[60px]">
         <div className="hero-content flex-col md:flex-row-reverse">
-          <div className="slider-part md:w-2/4 relative " data-aos="fade-left">
+          <div className="slider-part md:w-2/5 relative " data-aos="fade-left">
             {/* <CardSlide displayedUsers = {displayedUsers}/> */}
             <img src="https://i.ibb.co/109dVvN/4346013-removebg-preview.png" className='w-full' alt="" />
           </div>
-          <div className="md:w-2/4 flex flex-col mt-4 md:mt-0">
+          <div className="md:w-3/5 flex flex-col mt-4 md:mt-0">
             <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold flex flex-col">
               <p>Discover & Collect</p>
               <p>Users Details</p>

@@ -14,7 +14,7 @@ const Home = () => {
   const users = useSelector((state) => state.usersReducer.users);
   const isLoading = useSelector((state) => state.usersReducer.isLoading);
 
-  const [sortOption, setSortOption] = useState("name"); 
+  const [sortOption, setSortOption] = useState("name");
   const [searchQuery, setSearchQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
 
@@ -52,7 +52,7 @@ const Home = () => {
   const displayedUsers = showAll ? filteredUsers : filteredUsers.slice(0, 8);
 
   return (
-    <div className="mx-h-[100vh] px-2 md:px-12 lg:px-[200px]">
+    <div className="mx-h-[100vh] px-2 md:px-12 lg:px-[100px]">
       <Banner users={users} />
       <div className="md:hidden">
         <div className="mb-4 flex justify-between items-center my-6">
@@ -104,9 +104,9 @@ const Home = () => {
         </div>
       </div>
       <div className="text-center">
-      <h1 className="text-3xl font-semibold mb-4 gradient-text text-center">
-            ~ List of Users ~
-          </h1>
+        <h1 className="text-3xl font-semibold mb-4 gradient-text text-center">
+          ~ List of Users ~
+        </h1>
       </div>
       <div className="hidden md:block">
         <div className="mb-4 flex justify-between items-center my-6">
@@ -157,22 +157,21 @@ const Home = () => {
         </div>
       ) : (
         <div className="pb-6 mx-auto text-center">
-        
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {displayedUsers.map((user) => (
               <UserCard key={user.id} user={user} />
             ))}
           </div>
           <div className="mt-4">
-          {filteredUsers.length > 8 && (
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="bg-gradient-to-r from-[#03045e] from-10% via-[#0077b6] via-30% to-[#0096c7] to-90% px-4 py-2 text-white font-semibold rounded-lg drop-shadow-xl w-[200px] cursor-pointer"
-            >
-              {showAll ? "See Less" : "See All"}
-            </button>
-          )}
-        </div>
+            {filteredUsers.length > 8 && (
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="bg-gradient-to-r from-[#03045e] from-10% via-[#0077b6] via-30% to-[#0096c7] to-90% px-4 py-2 text-white font-semibold rounded-lg drop-shadow-xl w-[200px] cursor-pointer"
+              >
+                {showAll ? "See Less" : "See All"}
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>

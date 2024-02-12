@@ -26,7 +26,7 @@ const UserDetails = () => {
   }, [userId]);
 
   return (
-    <div className="my-6 md:my-12 px-2 md:px-12 lg:px-[200px]">
+    <div className="my-6 md:my-12 px-2 md:px-12 lg:px-[100px]">
       {userDetails ? (
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex flex-col gap-4 w-full md:w-1/3">
