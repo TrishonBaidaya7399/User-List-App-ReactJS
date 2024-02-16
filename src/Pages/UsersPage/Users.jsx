@@ -59,7 +59,7 @@ const Home = () => {
           <div className="flex justify-center items-center">
             <label htmlFor="sortOption " className="mr-2">
               <MdOutlineSort
-                className="text-3xl text-blue-600"
+                className="text-3xl text-purple-600"
                 onClick={() => setOpen(!open)}
               />
             </label>
@@ -69,7 +69,7 @@ const Home = () => {
                   id="sortOption"
                   value={sortOption}
                   onChange={(e) => setSortOption(e.target.value)}
-                  className="select select-bordered w-fit h-7 m-0 md:w-auto border-blue-400 text-blue-600"
+                  className="select select-bordered w-fit h-7 m-0 md:w-auto border-purple-400 text-purple-600"
                 >
                   <option value="name">Filter by Name</option>
                   <option value="email">Filter by Email</option>
@@ -77,7 +77,7 @@ const Home = () => {
                 </select>
               </>
             )}
-            {/* <FaSortDown className='text-blue-600 -ml-10'/> */}
+            {/* <FaSortDown className='text-purple-600 -ml-10'/> */}
           </div>
           {!open && (
             <div className="flex justify-center items-center gap-2">
@@ -87,16 +87,16 @@ const Home = () => {
                 value={searchQuery}
                 placeholder="Search by Name"
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="input input-bordered w-full h-7 m-0 md:w-auto border-blue-400 text-blue-600"
+                className="input input-bordered w-full h-7 m-0 md:w-auto border-purple-400 text-purple-600"
               />
               <label htmlFor="searchQuery" className="">
-                <IoSearchCircleOutline className="text-2xl text-blue-600 -ml-10" />
+                <IoSearchCircleOutline className="text-2xl text-purple-600 -ml-10" />
               </label>
             </div>
           )}
           <div>
             <Link to="/addUser">
-              <button className="text-2xl md:text-3xl text-blue-500 rounded-full border-2 border-blue-600 p-1 text-center font-semibold">
+              <button className="text-2xl md:text-3xl text-purple-600 rounded-full border-2 border-purple-600 p-1 text-center font-semibold">
                 <RiUserAddFill />
               </button>
             </Link>
@@ -112,14 +112,14 @@ const Home = () => {
         <div className="mb-4 flex justify-between items-center my-6">
           <div className="flex justify-center items-center">
             <label htmlFor="sortOption " className="mr-2">
-              <MdOutlineSort className="text-3xl text-blue-600" />
+              <MdOutlineSort className="text-3xl text-purple-600" />
             </label>
 
             <select
               id="sortOption"
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
-              className="select select-bordered w-fit h-7 m-0 md:w-auto border-blue-400 text-blue-600"
+              className="select select-bordered w-fit h-7 m-0 md:w-auto border-purple-400 text-purple-600"
             >
               <option value="name">Filter by Name</option>
               <option value="email">Filter by Email</option>
@@ -134,16 +134,16 @@ const Home = () => {
               value={searchQuery}
               placeholder="Search by Name"
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="input input-bordered w-full h-7 m-0 md:w-auto border-blue-400 text-blue-600"
+              className="input input-bordered w-full h-7 m-0 md:w-auto border-purple-400 text-purple-600"
             />
             <label htmlFor="searchQuery" className="">
-              <IoSearchCircleOutline className="text-2xl text-blue-600 -ml-10" />
+              <IoSearchCircleOutline className="text-2xl text-purple-600 -ml-10" />
             </label>
           </div>
 
           <div>
             <Link to="/addUser">
-              <button className="text-2xl text-blue-500 rounded-full border-2 border-blue-600 p-1 text-center font-semibold">
+              <button className="text-2xl text-purple-600 rounded-full border-2 border-purple-600 p-1 text-center font-semibold">
                 <RiUserAddFill />
               </button>
             </Link>
@@ -166,7 +166,7 @@ const Home = () => {
             {filteredUsers.length > 8 && (
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="bg-gradient-to-r from-[#03045e] from-10% via-[#0077b6] via-30% to-[#0096c7] to-90% px-4 py-2 text-white font-semibold rounded-lg drop-shadow-xl w-[200px] cursor-pointer"
+                className="hover:bg-gradient-to-l bg-gradient-to-r from-[#6E026E] from-10% via-[#8A048A] via-30% to-[#EB03EB] to-90% px-4 py-2 text-white font-semibold rounded-lg drop-shadow-xl w-[200px] cursor-pointer"
               >
                 {showAll ? "See Less" : "See All"}
               </button>

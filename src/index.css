@@ -7,12 +7,12 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-}
+} 
 
 .gradient-text {
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #03045e, #0077b6, #0096c7);
+    background-image: linear-gradient(to right, rgb(110, 2, 110), rgb(138, 4, 138), rgb(235, 3, 235));
     display: inline-block;
     
   }

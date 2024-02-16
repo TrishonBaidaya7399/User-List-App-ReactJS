@@ -10,8 +10,8 @@ const Navbar = () => {
       {/* <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-blue-600 font-bold border-b-[3px] border-blue-600 pb-1 border-[transparent] "
-            : "text-blue-400 border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-blue-400 duration-300 hover:text-blue-600"
+            ? "text-purple-600 font-bold border-b-[3px] border-purple-600 pb-1 border-[transparent] "
+            : "text-purple-400 border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-purple-400 duration-300 hover:text-purple-600"
         }
         to="/"
       >
@@ -20,8 +20,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-blue-600 font-bold border-b-[3px] border-blue-600 pb-1 border-[transparent] "
-            : "text-blue-400 border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-blue-400 duration-300 hover:text-blue-600"
+            ? "text-purple-600 font-bold border-b-[3px] border-purple-600 pb-1 border-[transparent] "
+            : "text-purple-400 border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-purple-400 duration-300 hover:text-purple-600"
         }
         to="/"
       >
@@ -30,8 +30,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-blue-600 font-bold border-b-[3px] border-blue-600 pb-1 border-[transparent] "
-            : "text-blue-400 border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-blue-400 duration-300 hover:text-blue-600"
+            ? "text-purple-600 font-bold border-b-[3px] border-purple-600 pb-1 border-[transparent] "
+            : "text-purple-400 border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-purple-400 duration-300 hover:text-purple-600"
         }
         to="/addUser"
       >
@@ -41,13 +41,13 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100 bg-opacity-70 px-2 md:px-12 lg:px-[100px]">
+      <div className="navbar bg-purple-600/10 backdrop-blur-md drop-shadow-xl px-2 md:px-12 lg:px-[100px]">
         <div className="navbar-start">
           <div className="flex justify-center items-center gap-4">
             <img
-              src="https://i.ibb.co/Z2Y6FxM/830a8274e9d37f5530538d9357ebf3d8-removebg-preview.png"
+              src="https://i.ibb.co/mG3HjpQ/7153150.png"
               alt="users list app"
-              className="-mr-3 h-8 md:h-12 w-8 md:w-12 border-2 border-blue-400 p-1 rounded-full"
+              className="-mr-3 h-8 md:h-12 w-8 md:w-12 border-2 border-purple-400 rounded-full"
             />
             <h1>
             <a className="text-xl md:text-3xl gradient-text">UsersInfo</a>
@@ -64,16 +64,16 @@ const Navbar = () => {
               {
                 open 
                 ?
-                <MdClose className="text-3xl text-blue-500"/>
+                <MdClose className="text-3xl text-purple-600"/>
                 :
-                <MdMenu className="text-3xl text-blue-500"/> 
+                <MdMenu className="text-3xl text-purple-600"/> 
               }
             </div>
             {
               open &&
               <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] py-2 shadow bg-base-100 rounded-sm w-[100px] px-4 -ml-10"
+              className="menu menu-sm dropdown-content z-[100] py-2 shadow bg-white/50 backdrop-blur-md rounded-md w-[100px] px-4 -ml-[90px] -mt-8"
             >
               {navLinks}
             </ul>

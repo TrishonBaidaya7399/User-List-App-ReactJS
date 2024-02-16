@@ -152,8 +152,8 @@ const AddUser = () => {
       </div>
       <div>
         <div>
-          <div className="md:hidden text-center p-4 rounded-lg bg-gray-100 drop-shadow-xl mb-2 flex flex-col items-center justify-center">
-            <h2 className="text-xl font-bold text-blue-500 pb-1 mb-3 border-b-2 border-blue-500 w-fit px-2">
+          <div className="md:hidden text-center p-4 rounded-lg bg-purple-600/10 backdrop-blur-md drop-shadow-xl mb-2 flex flex-col items-center justify-center">
+            <h2 className="text-xl font-bold text-purple-600 pb-1 mb-3 border-b-2 border-purple-600 w-fit px-2">
               Preview
             </h2>
             <img
@@ -163,24 +163,24 @@ const AddUser = () => {
                   : "https://as2.ftcdn.net/v2/jpg/04/89/93/27/1000_F_489932758_qfhzj92KwhZ5Lr2APhi5FJNbnAkq9BIB.jpg"
               }
               alt={newUser.firstName}
-              className="w-40 h-40 rounded-full mx-auto mb-4 border-2 border-blue-500 p-1"
+              className="w-40 h-40 rounded-full mx-auto mb-4 border-2 border-purple-600 p-1"
             />
             <div className="mx-auto">
-              <p className="text-xl font-bold text-blue-600">{`${
+              <p className="text-xl font-bold text-purple-600">{`${
                 newUser?.firstName ? newUser?.firstName : "First Name"
               } ${newUser?.lastName ? newUser?.lastName : "Last Name"}`}</p>
-              <p className="text-gray-400">{`${
+              {/* <p className="text-gray-400">{`${
                 newUser?.company?.title ? newUser?.company?.title : "Title"
               }`}</p>
               <p className="text-gray-400 font-semibold text-lg">{`Company: ${
                 newUser?.company?.name ? newUser?.company?.name : "Company Name"
-              }`}</p>
+              }`}</p> */}
             </div>
           </div>
           <form onSubmit={handleAddUser}>
             <div className="flex gap-6 flex-col md:flex-row-reverse">
-              <div className="form border-2 rounded-lg bg-white drop-shadow-xl p-6 w-full">
-                <h2 className="text-xl font-bold text-blue-500 pb-1 mb-3 border-b-2 border-blue-500 w-fit px-2">
+              <div className="form text-gray-500 rounded-lg bg-purple-600/10 backdrop-blur-md drop-shadow-xl p-6 w-full">
+                <h2 className="text-xl font-bold text-purple-600 pb-1 mb-3 border-b-2 border-purple-600 w-fit px-2">
                   User Details
                 </h2>
                 <div className="my-2">
@@ -307,11 +307,11 @@ const AddUser = () => {
                   />
                 </div>
               </div>
-              <div className="form border-2 rounded-lg bg-white drop-shadow-xl p-6 w-full">
-                <h2 className="hidden md:block text-xl font-bold text-blue-500 pb-1 mb-3 border-b-2 border-blue-500 w-fit px-2">
+              <div className="form text-gray-500 rounded-lg bg-purple-600/10 backdrop-blur-md drop-shadow-xl p-6 w-full">
+                <h2 className="hidden md:block text-xl font-bold text-purple-600 pb-1 mb-3 border-b-2 border-purple-600 w-fit px-2">
                   Preview
                 </h2>
-                <div className="hidden md:block text-center p-4 rounded-lg bg-gray-100 drop-shadow-xl mt-3 mb-12">
+                <div className="hidden md:block text-center p-4 rounded-lg bg-white/50 backdrop-blur-md drop-shadow-xl mt-3 mb-12">
                   <img
                     src={
                       newUser.image
@@ -319,15 +319,15 @@ const AddUser = () => {
                         : "https://as2.ftcdn.net/v2/jpg/04/89/93/27/1000_F_489932758_qfhzj92KwhZ5Lr2APhi5FJNbnAkq9BIB.jpg"
                     }
                     alt={newUser.firstName}
-                    className="w-40 h-40 rounded-full mx-auto mb-4 border-2 border-blue-500 p-1"
+                    className="w-40 h-40 rounded-full mx-auto mb-4 border-2 border-purple-600 p-1"
                   />
                   <div className="mx-auto">
-                    <p className="text-xl font-bold text-blue-600">{`${
+                    <p className="text-xl font-bold text-purple-600">{`${
                       newUser?.firstName ? newUser?.firstName : "First Name"
                     } ${
                       newUser?.lastName ? newUser?.lastName : "Last Name"
                     }`}</p>
-                    <p className="text-gray-400">{`${
+                    {/* <p className="text-gray-400">{`${
                       newUser?.company?.title
                         ? newUser?.company?.title
                         : "Title"
@@ -336,10 +336,10 @@ const AddUser = () => {
                       newUser?.company?.name
                         ? newUser?.company?.name
                         : "Company Name"
-                    }`}</p>
+                    }`}</p> */}
                   </div>
                 </div>
-                <h2 className="text-xl font-bold text-blue-500 pb-1 mb-3 border-b-2 border-blue-500 w-fit px-2">
+                <h2 className="text-xl font-bold text-purple-600 pb-1 mb-3 border-b-2 border-purple-600 w-fit px-2">
                   Company Details
                 </h2>
                 <div className="my-2">
