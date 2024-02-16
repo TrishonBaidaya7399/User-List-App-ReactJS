@@ -184,7 +184,7 @@ const AddUser = () => {
                   User Details
                 </h2>
                 <div className="my-2">
-                  <label>First Name:</label>
+                  <label className="text-purple-700 font-semiold ">First Name:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -195,7 +195,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Last Name:</label>
+                  <label className="text-purple-700 font-semiold ">Last Name:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -206,7 +206,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Email:</label>
+                  <label className="text-purple-700 font-semiold ">Email:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -217,7 +217,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Avatar URL:</label>
+                  <label className="text-purple-700 font-semiold ">Avatar URL:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -228,7 +228,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Age:</label>
+                  <label className="text-purple-700 font-semiold ">Age:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -239,7 +239,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Gender:</label>
+                  <label className="text-purple-700 font-semiold ">Gender:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -250,7 +250,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Phone:</label>
+                  <label className="text-purple-700 font-semiold ">Phone:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -261,7 +261,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Blood Group:</label>
+                  <label className="text-purple-700 font-semiold ">Blood Group:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -272,7 +272,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Birth Date:</label>
+                  <label className="text-purple-700 font-semiold ">Birth Date:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -283,7 +283,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Address:</label>
+                  <label className="text-purple-700 font-semiold ">Address:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -295,7 +295,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>City:</label>
+                  <label className="text-purple-700 font-semiold ">City:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -343,7 +343,7 @@ const AddUser = () => {
                   Company Details
                 </h2>
                 <div className="my-2">
-                  <label>Company Name:</label>
+                  <label className="text-purple-700 font-semiold ">Company Name:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -354,7 +354,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Title:</label>
+                  <label className="text-purple-700 font-semiold ">Title:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -365,7 +365,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Department:</label>
+                  <label className="text-purple-700 font-semiold ">Department:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -376,7 +376,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>Address:</label>
+                  <label className="text-purple-700 font-semiold ">Address:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -388,7 +388,7 @@ const AddUser = () => {
                   />
                 </div>
                 <div className="my-2">
-                  <label>City:</label>
+                  <label className="text-purple-700 font-semiold ">City:</label>
                   <input
                     required={true}
                     className="input bg-gray-200 h-8 ml-2 rounded-md w-full"
@@ -403,7 +403,7 @@ const AddUser = () => {
             </div>
             <div className="flex justify-center py-6">
               <button
-                className="bg-gradient-to-r from-[#03045e] from-10% via-[#0077b6] via-30% to-[#0096c7] to-90% px-4 py-2 text-white font-semibold rounded-lg drop-shadow-xl w-[200px]"
+                className="hover:bg-gradient-to-l bg-gradient-to-r from-[#6E026E] from-10% via-[#8A048A] via-30% to-[#EB03EB] to-90% px-4 py-2 text-white font-semibold rounded-lg drop-shadow-xl w-[200px]"
                 type="submit"
               >
                 Add User
